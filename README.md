@@ -60,11 +60,17 @@ topology.
 
 ```
 Backend .......... Java · Spring Boot · REST APIs · OpenAPI
-Data ............. PostgreSQL · PostGIS · Flyway · Redis
-Cloud ............ AWS · Docker · Terraform · CI/CD
+Data ............. PostgreSQL · PostGIS (geo) · Flyway · Redis (cache)
+Cloud ............ AWS (at work) · Fly.io · Vultr VPS · Cloudflare Pages/R2
+Infra ............ Docker · Terraform · Caddy · CI/CD · encrypted backups
 Testing .......... JUnit · Testcontainers against a real Postgres
 Practices ........ API-first · written decisions · signed webhooks
 ```
+
+Three systems on three different providers: AWS at work, Fly.io for Ryguasu, a
+Vultr VPS for Fil-Grama. I provisioned the last two myself and I pay their bills
+— around USD 50 a month for Ryguasu, which is part of why the architecture looks
+the way it does.
 
 I'm still studying computer engineering. What I know comes from building and
 running real systems, and from the ones that broke first.
